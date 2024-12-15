@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .center-blank {
+            flex: 1;
+            text-align: center;
+        }
+
+        .contact-me {
+            font-size: 16px;
+            color: white;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .divider {
+            width: 2px;
+            height: 20px;
+            background-color: white;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+        }
+
+        .project-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 10%;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .project-image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .project-description {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .project-description h2 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .project-description p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .project-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 10%;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .education-image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .education-description {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .education-description h2 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .education-description p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Your Logo</div>
+        <div class="center-blank"></div>
+        <div class="contact-me">Contact Me</div>
+        <div class="menu">
+            <div class="divider"></div>
+            <div>Menu</div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, my name is <br>Steven.</h1>
+            <p>I'm an <b>undergraduate student</b> at Michigan State University with <br>a passion for innovation.</p>
+        </div>
+    </section>
+
+    <!-- Project Section 1 -->
+    <section class="project-section">
+        <div class="project-image" style="background-image: url('your-art-image1.jpg');"></div>
+        <div class="project-description">
+            <h2>Project Title 1</h2>
+            <p>This is where you can describe your first project. Talk about what it is, what tools you used, and why it's awesome.</p>
+        </div>
+    </section>
+
+    <!-- Project Section 2 -->
+    <section class="project-section">
+        <div class="project-image" style="background-image: url('your-art-image2.jpg');"></div>
+        <div class="project-description">
+            <h2>Project Title 2</h2>
+            <p>This is where you can describe your second project. Share any interesting details or tools you used to complete it.</p>
+        </div>
+    </section>
+
+    <!-- Project Section 3 -->
+    <section class="project-section">
+        <div class="project-image" style="background-image: url('your-art-image3.jpg');"></div>
+        <div class="project-description">
+            <h2>Project Title 3</h2>
+            <p>This is where you can describe your third project. Highlight key features and any challenges you overcame while building it.</p>
+        </div>
+    </section>
+
+     <!-- Education Section -->
+     <section class="education-section">
+        <div class="education-image" style="background-image: url('your-art-image3.jpg');"></div>
+        <div class="education-description">
+            <h2>Education</h2>
+            <p>This is where you can describe your third project. Highlight key features and any challenges you overcame while building it.</p>
+        </div>
+    </section>
+</body>
+</html>

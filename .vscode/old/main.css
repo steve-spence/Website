@@ -1,0 +1,45 @@
+body {
+    background: var(--bg);
+    background-color: rgb(97, 92, 92);
+    color: rgb(216, 212, 212);
+    font-family: helvetica;
+}
+li {
+    list-style: circle;
+  }
+
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.seciton-container{
+    background: black !important;
+    border: 2px solid red;
+    width: 30%;
+    border-radius: 5px;
+}
+.seciton-container2{
+    background: Blue !important;
+    border: 2px solid red;
+    width: 30%;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.mountain-img-container{
+    width: 100px;
+    height: 100px;
+    outline: 10px;
+    outline-color: black;
+    
+}
+    
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+}
+

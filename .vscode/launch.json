@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/School/MSU Sm 4/CSE 325/proj04",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
+
+name":"Ms.Web.PageUnload","time":"2024-12-14T02:35:44.527Z","ver":"4.0","iKey":"o:aacbcf0ee7614738b1ea4f99c23f2e82","ext":{"web":{"isManual":false,"domain":"www.microsoft.com","userConsent":true,"consentDetails":"{"Required":true,"Analytics":true,"SocialMedia":true,"Advertising":true,"GPC_DataSharingOptIn":true}"},"sdk":{"ver":"1DS-Web-JS-3.2.18","seq":19,"installId":"3e4627ca-4482-460c-a0e9-9c5f6700b7aa","epoch":"960369185"},"app":{"locale":"en-US","env":"prod","sesId":"/SDUPk1jQtH4BMIYt4RZ+t"},"user":{"locale":"en-US","localId":"t:34621952B421678D28A40A5CB021615A"},"intweb":{"msfpc":"GUID=45247ab95827411eade46a4ef740f1b4&HASH=4524&LV=202405&V=4&LU=1715620502573"},"utc":{"popSample":100},"loc":{"tz":"-05:00"},"mscv":{"cV":"CASMicrosoftCV86f6ef28.0.17"},"metadata":{"f":{"dwellTime":{"t":6},"vpHeight":{"t":6},"vScrollOffset":{"t":6},"pageLoadTime":{"t":6},"timing":{"f":{"connectStart":{"t":6},"secureConnectionStart":{"t":6},"unloadEventEnd":{"t":6},"domainLookupStart":{"t":6},"domainLookupEnd":{"t":6},"responseStart":{"t":6},"connectEnd":{"t":6},"responseEnd":{"t":6},"requestStart":{"t":6},"domLoading":{"t":6},"redirectStart":{"t":6},"loadEventEnd":{"t":6},"domComplete":{"t":6},"navigationStart":{"t":6},"loadEventStart":{"t":6},"domContentLoadedEventEnd":{"t":6},"unloadEventStart":{"t":6},"redirectEnd":{"t":6},"domInteractive":{"t":6},"fetchStart":{"t":6},"domContentLoadedEventStart":{"t":6}}},"navigation":{"f":{"type":{"t":6},"redirectCount":{"t":6}}},"paint":{"f":{"startTime":{"t":6},"duration":{"t":6},"lcp":{"t":6}}}}}},"data":{"baseType":"PageUnloadData","baseData":{"name":"HomePage","uri":"https:\/\/www.microsoft.com/en-us/","id":"f1cb2e8c-7133-44c2-bfd7-82dd1ccea358","properties":{"version":"PostChannel=3.2.18"},"ver":"1.0"},"dwellTime":59377,"scrollDepth":"0/6284","vpHeight":861,"vScrollOffset":0,"pageLoadTime":2452,"CookiePresentRPSSecAuth":false,"RelatedServerCV":"CASMicrosoftCV86f6ef28.0","CMS":"Cascade","tenantName":"mscom","tenantTitle":"Mscom","tenantDomain":"microsoft","tenantSiteName":"microsoft","timing":{"connectStart":1734143684164,"secureConnectionStart":0,"unloadEventEnd":0,"domainLookupStart":1734143684164,"domainLookupEnd":1734143684164,"responseStart":1734143684653,"connectEnd":1734143684164,"responseEnd":1734143684682,"requestStart":1734143684169,"domLoading":1734143684661,"redirectStart":1734143683881,"loadEventEnd":0,"domComplete":1734143686328,"navigationStart":1734143683876,"loadEventStart":1734143686328,"domContentLoadedEventEnd":1734143685228,"unloadEventStart":0,"redirectEnd":1734143684164,"domInteractive":1734143685160,"fetchStart":1734143684164,"domContentLoadedEventStart":1734143685215},"navigation":{"type":0,"redirectCount":1},"paint":{"name":"first-contentful-paint","entryType":"paint","startTime":1183,"duration":0,"lcp":1189.7999999821186}}}"
