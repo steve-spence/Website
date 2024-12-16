@@ -16,18 +16,25 @@ cdd3d5 silver (silver)
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: 'Pacifico', ;    margin: 0;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-color: #212121;
     /* display: flex;
     justify-content: center;
     align-items: center; 
     flex-direction: column; */
 }
 
+.loading-page
+{
+    height: 100vh;
+    background-color: #00adb5;
+}
+
 header {
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,27 +42,44 @@ header {
     background-color: #75B8C8;
     position: sticky;
     top: 0;
-    z-index: 2;
-}
+    transition: transform 0.5s ease; /* Smooth animation for entering/exiting */
+    transform: translateY(-100%); /* Start off-screen */
+    z-index: 3;
+  }
+
+  /* Visible state */
+  header.show {
+    transform: translateY(0); /* Fall into view */
+  }
 
 .hero-section {
     position: relative;
-    height: 95vh;
-    width: 100vw;
+    height: 90vh;
     display: flex;
     justify-content:center;
     align-items: center;
     text-align: center;
-    z-index: 1;
     background-color: #212121;
 }
 
 .project-container {
-    width: 100vw;
+
     background: linear-gradient(135deg, rgba(33, 33, 33, 0.9), rgba(77, 77, 77, 0.8), rgba(211, 211, 211, 0.4));
     background-size: 400% 400%; /* This creates a more dynamic, shifting gradient */
-    animation: gradientShift 15s ease infinite; /* Smooth animation effect for the gradient */
+    /* animation: gradientShift 15s ease infinite; Smooth animation effect for the gradient */
+    animation: gradientAnimation 6s ease infinite;
 }
+.education-conatiner
+{
+    background-color: #220C10;
+    border-radius: 15%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
 @keyframes gradientShift {
     0% {
@@ -68,30 +92,68 @@ header {
         background-position: 0% 50%;
     }
 }
+  
+  /* Base logo container */
+    .logo {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      background-color: #212121;
+      border-radius: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* Shared styles for shapes */
+    .logo .shape {
+      position: absolute;
+      border: 2px solid black; /* Black outline */
+      border-radius: 50%;
+      transition: transform .2s ease;
+    }
 
-.logo {
-    padding-right: 20px;
-    background: orange;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    transform: rotate(20deg);
-    /* width: 0;
-    height: 0;
-	border-top: 10px solid transparent;
-    border-left: 5px solid #555; */
-
-}
-.logo:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 40px;
-    background: orange;
-    transform: rotate(135deg);
+  .shape:hover 
+  {
+    transform: scale(1.1);  
   }
+  
+    /* First shape */
+    .shape1 {
+      width: 25px;
+      height: 25px;
+      background-color: #77CBB9; /* Nice fill color blue */
+      top: 30px;
+      left: 30px;
+      /* box-shadow: 2px 2px 3px #5AA89A; */
+      z-index: 2;
+    }
+  
+    /* Second shape */
+    .shape2 {
+      width: 40px;
+      height: 40px;
+      background-color: #FFA07A; /* Another nice fill color */
+      top: 5px;
+      left: 5px;
+      /* box-shadow: 2px 2px 2px #E07B5A; */
+    } 
+  
+
+    .divider {
+        width: 2px;
+        height: 20px;
+        background-color: black;
+        opacity: 80%;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #220C10;
+        padding: 10px;
+    }
 
 .center-blank {
     display:block;
@@ -105,21 +167,7 @@ header {
     padding-right: 10px;
     font-weight: bold;
     padding: 10px;
-}
 
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #220C10;
-    padding: 10px;
-}
-
-.divider {
-    width: 2px;
-    height: 20px;
-    background-color: black;
-    opacity: 80%;
 }
 
 .hero-content {
@@ -132,7 +180,7 @@ header {
 }
 
 .hero-steven-photo {
-    background-size: cover;
+    background-size: 150%;
     background-position: center;
     aspect-ratio: 1;
     width: 300px;
@@ -143,16 +191,16 @@ header {
     background-color: #ccc; /* Add a background color to see if the element is being displayed */
     transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth animation */
 }
+.hero-steven-photo:hover {
+    transform: scale(1.1); /* Enlarges the image by 10% */
+    border-color: #15d7ad;
+}
+
 canvas {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-}
-
-.hero-steven-photo:hover {
-    transform: scale(1.1); /* Enlarges the image by 10% */
-    border-color: #15d7ad;
 }
 
 .hero-content h1 {
@@ -202,7 +250,6 @@ canvas {
     align-items: center;
     justify-content: center;
     padding: 50px 10%;
-    background-color: #ffffff;
     color: #333;
 }
 
@@ -243,6 +290,7 @@ canvas {
     align-items: center;
     gap: 30px;
 }
+
 .output-layer {
     display: flex;
     flex-direction: column;
@@ -256,12 +304,14 @@ canvas {
     align-items: center;
     gap: 20px;
 }
+
 .hidden-layer2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
 }
+
 .hidden-layer3 {
     display: flex;
     flex-direction: column;
@@ -275,10 +325,6 @@ canvas {
     background-color: #00adb5;
     border-radius: 50%;
     position: relative;
-}
-
-/* Animate Glow Effect */
-.node {
     animation: glow var(--animation-time) infinite;
 }
 

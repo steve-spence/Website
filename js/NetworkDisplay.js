@@ -54,7 +54,7 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
                 ctx.lineWidth = 1;
                 ctx.stroke();
             });
-        });
+        }); 
     }
 
     drawConnections();
