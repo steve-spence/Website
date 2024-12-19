@@ -16,11 +16,12 @@ cdd3d5 silver (silver)
 }
 
 body {
-    font-family: 'Pacifico', ;    margin: 0;
+    font-family: 'Bitter', serif;    
+    margin: 0;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #212121;
+    /* background-color: #212121; */
     /* display: flex;
     justify-content: center;
     align-items: center; 
@@ -30,7 +31,8 @@ body {
 .loading-page
 {
     height: 100vh;
-    background-color: #00adb5;
+    background-color: black;
+    z-index: 3;
 }
 
 header {
@@ -39,12 +41,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background-color: #75B8C8;
     position: sticky;
     top: 0;
     transition: transform 0.5s ease; /* Smooth animation for entering/exiting */
     transform: translateY(-100%); /* Start off-screen */
-    z-index: 3;
+    z-index: 100;
   }
 
   /* Visible state */
@@ -54,7 +55,7 @@ header {
 
 .hero-section {
     position: relative;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -64,15 +65,18 @@ header {
 
 .project-container {
 
-    background: linear-gradient(135deg, rgba(33, 33, 33, 0.9), rgba(77, 77, 77, 0.8), rgba(211, 211, 211, 0.4));
+    background: #3B3B3B;
+    /* background: linear-gradient(135deg, rgba(33, 33, 33, 0.9), rgba(77, 77, 77, 0.8), rgba(211, 211, 211, 0.4)); */
     background-size: 400% 400%; /* This creates a more dynamic, shifting gradient */
     /* animation: gradientShift 15s ease infinite; Smooth animation effect for the gradient */
-    animation: gradientAnimation 6s ease infinite;
+    /* animation: gradientAnimation 6s ease infinite; */
 }
 .education-conatiner
 {
-    background-color: #220C10;
+    background-color: #FFA07A;
     border-radius: 15%;
+    width: 100vw;
+    height: 100vh;
 }
 
 @keyframes gradientAnimation {
@@ -126,7 +130,7 @@ header {
       top: 30px;
       left: 30px;
       /* box-shadow: 2px 2px 3px #5AA89A; */
-      z-index: 2;
+      z-index: 99;
     }
   
     /* Second shape */
@@ -217,7 +221,6 @@ canvas {
     align-items: center;
     justify-content: center;
     padding: 50px 10%;
-    color: #333;
 }
 
 .project-image {
@@ -250,7 +253,7 @@ canvas {
     align-items: center;
     justify-content: center;
     padding: 50px 10%;
-    color: #333;
+    background-color: inherit;
 }
 
 .education-image {
