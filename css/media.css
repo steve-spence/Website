@@ -30,8 +30,7 @@ body {
 
 .loading-page
 {
-    height: 100vh;
-    background-color: black;
+    background-color: #CCC5B9   ;
     z-index: 3;
 }
 
@@ -64,12 +63,7 @@ header {
 }
 
 .project-container {
-
     background: #3B3B3B;
-    /* background: linear-gradient(135deg, rgba(33, 33, 33, 0.9), rgba(77, 77, 77, 0.8), rgba(211, 211, 211, 0.4)); */
-    background-size: 400% 400%; /* This creates a more dynamic, shifting gradient */
-    /* animation: gradientShift 15s ease infinite; Smooth animation effect for the gradient */
-    /* animation: gradientAnimation 6s ease infinite; */
 }
 .education-conatiner
 {
@@ -79,24 +73,6 @@ header {
     height: 100vh;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-  
   /* Base logo container */
     .logo {
       position: relative;
