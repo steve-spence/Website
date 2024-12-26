@@ -1,4 +1,9 @@
+
 function connectNodes(inputNodes, outputNodes, nodeRadius) {
+    // if(document.querySelector("canvas"))
+    // {
+    //     return;
+    // }
     // Create a canvas to draw connections
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
