@@ -21,12 +21,10 @@
     // parent of contactMe must be empty div
     if(scrollY >= .1*window.vh)  // 10vh header size
     {
-      headerContainer.classList.add('light');
       root.style.setProperty('--header-element-color', '#fffcf2');
     }
     else
     {
-      headerContainer.classList.remove('light');
       root.style.setProperty('--header-element-color', '#212121');
     }
   });
