@@ -9,32 +9,48 @@
   <body>
     <div class="loading-page">
       <header>
-        <div class="header-content-container">
-          <div class="logo">
-            <div class="shape shape1"></div>
-            <div class="shape shape2"></div>
-          </div>
-          <div class="contact-me">Contact Me</div>
+        <div class="header-container">
+          <nav class="nav-header-content-container">
+            <ul class="header-list-items">
+              <!-- <li class="logo">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+              </li> -->
+              <li class="header-home">Home</li>
+              <li class="header-projects">Projects</li>
+              <li class="header-skills">Skills</li>
+              <li class="header-education">Education</li>
+              <li class="header-contact-me">Contact Me</li>
+            </ul>
+          </nav>
         </div>
       </header>
+      <div class="content-divider"></div>
       <div class="page-content">
         <div class="hero-container">
-          <section class="hero-section">
-            <div class="hero-content">
-              <h1>Hi, my name is <br />Steven.</h1>
-              <p>
-                I'm an <b>undergraduate student</b> at Michigan State University
-                with a passion for innovation.
-              </p>
-            </div>
-            <div
-              class="hero-steven-photo"
-              style="background-image: url('/img/teeth.jpg')"
-            ></div>
-          </section>
+          <div class="banner">
+            <section class="hero-section">
+              <div class="hero-content">
+                <h1>Hi, my name is <br />Steven.</h1>
+                <p>
+                  I'm an <b>undergraduate student</b> at Michigan State
+                  University with a passion for innovation.
+                </p>
+              </div>
+              <div
+                class="hero-steven-photo"
+                style="background-image: url('/img/teeth.jpg')"
+              ></div>
+              <canvas id="waveCanvas"></canvas>
+            </section>
+          </div>
         </div>
         <div class="project-container">
           <!-- Project Section 1 -->
+          <div class="hero-dividor">
+            <div class="dividor"></div>
+          </div>
+          <div class="project-title">My Projects</div>
           <section class="project-section">
             <div class="network">
               <!-- Input Layer -->
@@ -164,8 +180,8 @@
         </footer>
       </div>
     </div>
+    <script src="js/variables.js"></script>
     <script src="js/NetworkDisplay.js"></script>
     <script src="js/Header.js"></script>
-    <script src="js/variables.js"></script>
   </body>
 </html>

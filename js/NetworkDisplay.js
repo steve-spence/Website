@@ -97,3 +97,67 @@ nodes.forEach(node => {
     time = time < 1 ? 1 : time;
     node.style.setProperty('--animation-time', time + 's');
 });
+
+const canvas = document.getElementById('waveCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.vh*.7;
+
+const particles = [];
+const mouse = { x: null, y: null };
+
+class Particle {
+    constructor(x, y, size, color) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.baseX = x;
+        this.baseY = y;
+        this.color = color;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    update() {
+        this.y = this.baseY + Math.sin(this.baseX * 0.05 + performance.now() * 0.002) * 20;
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < 100) {
+            this.size = 5;
+        } else {
+            this.size = 2;
+        }
+        this.draw();
+    }
+}
+
+function initParticles() {
+    for (let i = 0; i < 100; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const size = 2;
+        const color = 'rgba(255, 255, 255, 0.8)';
+        particles.push(new Particle(x, y, size, color));
+    }
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(particle => particle.update());
+    requestAnimationFrame(animate);
+}
+
+canvas.addEventListener('mousemove', event => {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
+
+initParticles();
+animate();
