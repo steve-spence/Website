@@ -215,13 +215,6 @@ header.show {
   padding-bottom: 20px;
 }
 
-.education-container {
-  background-color: #ffa07a;
-  border-radius: 15%;
-  width: 100vw;
-  height: 100vh;
-}
-
 .hero-content {
   text-align: left;
   padding: 20px;
@@ -403,26 +396,49 @@ header.show {
   line-height: 1.6;
 }
 
+.education-container {
+  background-color: #f9faf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
 .education-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 10%;
-  background-color: inherit;
+  padding: 20px;
+  background-color: #bdbdbdb7;
+  border-radius: 20px;
 }
 
 .education-image {
-  flex: 1;
   background-size: cover;
   background-position: center;
   height: 300px;
+  width: 300px;
   border-radius: 10px;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 28px;
+  line-height: 3;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .education-description {
   flex: 1;
   padding: 20px;
-  text-align: right;
+  text-align: left;
 }
 
 .education-description h2 {
@@ -487,11 +503,6 @@ header.show {
   50% {
     box-shadow: 0 0 20px #00fff5, 0 0 50px #00fff5;
   }
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
 }
 
 footer {
