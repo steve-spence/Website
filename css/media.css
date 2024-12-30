@@ -185,10 +185,19 @@ header.show {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 3;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero-section {
   position: relative;
+  width: 100vw;
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -206,7 +215,7 @@ header.show {
   gap: 3vh;
 }
 
-.education-conatiner {
+.education-container {
   background-color: #ffa07a;
   border-radius: 15%;
   width: 100vw;
@@ -221,6 +230,53 @@ header.show {
   width: 40vw;
 }
 
+.social-container {
+  position: absolute;
+  top: 55vh;
+  width: 100vw;
+  padding: 20px;
+  text-align: center;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-style-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-button {
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  flex-direction: row;
+  border-color: solid green;
+  transition: transform 0.3s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+.social-button a {
+  text-decoration: none;
+  color: #000000ab;
+}
+
+.social-image {
+  background-position: center;
+  width: 32px;
+  height: 28px;
+}
+
 .hero-steven-photo {
   background-size: 150%;
   background-position: center;
@@ -232,7 +288,7 @@ header.show {
   border: #000000 solid;
   background-color: #ccc;
   transition: transform 0.3s ease, border-color 0.3s ease;
-  z-index: 2;
+  z-index: 6;
   position: relative; /* Ensure child elements (overlay) position correctly */
 }
 
@@ -392,9 +448,6 @@ header.show {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-}
-canvas {
-  z-index: 1000;
 }
 
 .node {

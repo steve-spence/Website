@@ -40,7 +40,6 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
     function drawConnections() {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
 
-        console.log(network.getBoundingClientRect().x + window.scrollX);
         inputNodes.forEach(inputNode => {
             const inputRect = inputNode.getBoundingClientRect();
             const inputCenter = {
@@ -52,6 +51,7 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
 
             outputNodes.forEach(outputNode => {
                 const outputRect = outputNode.getBoundingClientRect();
+                // position is adjusted for offset from center
                 const outputCenter = {
                     x: (outputRect.left + outputRect.width / 2 + window.scrollX) -
                     (network.getBoundingClientRect().x + window.scrollX),
