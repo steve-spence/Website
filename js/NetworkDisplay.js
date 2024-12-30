@@ -1,45 +1,62 @@
 let canvasContainer = document.querySelector(".canvas-container")
 let network = document.querySelector(".network")
 
+function getRelativePosition(node, parent) {
+    const nodeRect = node.getBoundingClientRect();
+    const parentRect = parent.getBoundingClientRect();
+
+    const relativePosition = {
+        x: nodeRect.left - parentRect.left + window.scrollX, // Subtract parent left
+        y: nodeRect.top - parentRect.top + window.scrollY   // Subtract parent top
+    };
+
+    return relativePosition;
+}
+
 function connectNodes(inputNodes, outputNodes, nodeRadius) {
-    // if(document.querySelector("canvas"))
-    // {
-    //     return;
-    // }
     // Create a canvas to draw connections
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     canvasContainer.appendChild(canvas);
 
-    // Function to update canvas dimensions
+    // Function to update canvas dimensions based on the network size
     function updateCanvasSize() {
-        canvas.width = document.documentElement.scrollWidth;
-        canvas.height = document.documentElement.scrollHeight;
+        const networkRect = network.getBoundingClientRect();
+
+        // Set canvas size to match the network container size
+        canvas.width = networkRect.width;
+        canvas.height = networkRect.height;
     }
-    updateCanvasSize();
+
+    updateCanvasSize(); // Initially update canvas size
 
     // Style canvas to overlay content
     canvas.style.position = 'absolute';
     canvas.style.top = '0';
     canvas.style.left = '0';
-    canvas.style.pointerEvents = 'none'; // Make it non-interactive
+    canvas.style.pointerEvents = 'none'; // Make the canvas non-interactive so it doesn't block any interactions
 
     // Function to draw connections
     function drawConnections() {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
 
+        console.log(network.getBoundingClientRect().x + window.scrollX);
         inputNodes.forEach(inputNode => {
             const inputRect = inputNode.getBoundingClientRect();
             const inputCenter = {
-                x: inputRect.left + inputRect.width / 2 + window.scrollX,
-                y: inputRect.top + inputRect.height / 2 + window.scrollY,
+                x: (inputRect.left + inputRect.width / 2 + window.scrollX) -
+                 (network.getBoundingClientRect().x + window.scrollX),
+                y: (inputRect.top + inputRect.height / 2 + window.scrollY) - 
+                (network.getBoundingClientRect().y + window.scrollY)
             };
 
             outputNodes.forEach(outputNode => {
                 const outputRect = outputNode.getBoundingClientRect();
                 const outputCenter = {
-                    x: outputRect.left + outputRect.width / 2 + window.scrollX,
-                    y: outputRect.top + outputRect.height / 2 + window.scrollY,
+                    x: (outputRect.left + outputRect.width / 2 + window.scrollX) -
+                    (network.getBoundingClientRect().x + window.scrollX),
+                    y: (outputRect.top + outputRect.height / 2 + window.scrollY)- 
+                    (network.getBoundingClientRect().y + window.scrollY)
                 };
 
                 // Calculate the line start points based on the radius (subtract radius from center)
@@ -57,40 +74,38 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
                 ctx.beginPath();
                 ctx.moveTo(inputEdge.x, inputEdge.y); 
                 ctx.lineTo(outputEdge.x, outputEdge.y);
-                ctx.strokeStyle = '#D3D3D3';
+                ctx.strokeStyle = '#7c7c7c';
                 ctx.lineWidth = 1;
                 ctx.stroke();
             });
         }); 
     }
 
-    drawConnections();
+    drawConnections(); // Draw the initial connections
 
     // Redraw connections on resize or scroll
     window.addEventListener('resize', () => {
-        updateCanvasSize();
-        drawConnections();
+        updateCanvasSize(); // Update canvas size on resize
+        drawConnections(); // Redraw connections
     });
 
-    window.addEventListener('scroll', drawConnections);
+    window.addEventListener('scroll', drawConnections); // Redraw connections on scroll
 }
 
 // Fetch nodes from the DOM
 const inputNodes = document.querySelectorAll('.input-layer .node');
 const hiddenNodes1 = document.querySelectorAll('.hidden-layer1 .node');
 const hiddenNodes2 = document.querySelectorAll('.hidden-layer2 .node');
-const hiddenNodes3 = document.querySelectorAll('.hidden-layer3 .node');
 const outputNodes = document.querySelectorAll('.output-layer .node');
 
 // Define the radius of your nodes (you can adjust this value as needed)
 const nodeRadius = 10;
 
 // Call the function to connect the nodes
-
 connectNodes(inputNodes, hiddenNodes1, nodeRadius);
 connectNodes(hiddenNodes1, hiddenNodes2, nodeRadius);
-connectNodes(hiddenNodes2, hiddenNodes3, nodeRadius);
-connectNodes(hiddenNodes3, outputNodes, nodeRadius);
+connectNodes(hiddenNodes2, outputNodes, nodeRadius);
+
 
 // update time for all nodes aniamtion
 var nodes = document.querySelectorAll('.node');

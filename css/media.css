@@ -90,6 +90,7 @@ header {
   border-radius: 5vw;
   color: #303030c9;
   transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative;
 }
 /* Style anchor links inside list items */
 .header-list-items li a {
@@ -104,11 +105,6 @@ header {
 .header-list-items li:hover {
   background-color: #ffffffe7; /* Adds a background color on hover */
   color: black; /* Changes the text color on hover */
-}
-
-.header-active:hover {
-  background-color: #ffffffe7; /* Keep consistent styling on hover */
-  color: black;
 }
 
 /* Base logo container */
@@ -395,14 +391,10 @@ header.show {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
-}
-
-.hidden-layer3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 20px;
+}
+canvas {
+  z-index: 1000;
 }
 
 .node {

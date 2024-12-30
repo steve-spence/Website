@@ -16,14 +16,16 @@
                 <div class="shape shape1"></div>
                 <div class="shape shape2"></div>
               </li> -->
-              <li><a href="#home" class="header-home">Home</a></li>
-              <li><a href="#projects" class="header-projects">Projects</a></li>
-              <li><a href="#skills" class="header-skills">Skills</a></li>
+              <li class="default-highlight">
+                <a href="#home" class="nav-link">Home</a>
+              </li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
               <li>
-                <a href="#education" class="header-education">Education</a>
+                <a href="#education" class="nav-link">Education</a>
               </li>
               <li>
-                <a href="#contact-me" class="header-contact-me">Contact Me</a>
+                <a href="#contact-me" class="nav-link">Contact Me</a>
               </li>
             </ul>
           </nav>
@@ -57,9 +59,6 @@
           <!-- Project Section 1 -->
           <section id="projects" class="project-title">My Projects</section>
           <div class="project-section">
-            <div class="canvas-container">
-              <canvas class="network-canvas"></canvas>
-            </div>
             <div class="network">
               <!-- Input Layer -->
               <div class="input-layer">
@@ -82,24 +81,15 @@
                 <div class="node"></div>
                 <div class="node"></div>
                 <div class="node"></div>
-                <div class="node"></div>
-                <div class="node"></div>
-              </div>
-              <!-- Hidden Layer3 -->
-              <div class="hidden-layer3">
-                <div class="node"></div>
-                <div class="node"></div>
-                <div class="node"></div>
-                <div class="node"></div>
-                <div class="node"></div>
               </div>
               <!-- Output Layer -->
               <div class="output-layer">
                 <div class="node"></div>
                 <div class="node"></div>
               </div>
+              <div class="canvas-container"></div>
             </div>
-            <div class="project-description">
+            <div class="project-description" style="padding-left: 0px">
               <h2>Neural Network</h2>
               <p>
                 In this project, I developed a neural network in Python. I

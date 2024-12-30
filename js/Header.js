@@ -31,4 +31,6 @@
   // Initially show the header when the page loads
   window.addEventListener('load', () => {
     header.classList.add('show');
+    const highlight = document.querySelector(".default-highlight");
+    highlight.classList.add("header-active");
   });
