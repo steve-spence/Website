@@ -57,9 +57,9 @@ header {
   padding-top: 10px; /* Add some padding to give breathing space */
 }
 
-section .header-active {
-  font-weight: bold;
-  background-color: #14cd98;
+.header-active {
+  background-color: #ffffffe7; /* Adds a background color on hover */
+  color: black; /* Changes the text color on hover */
 }
 
 /* Navigation Container */
@@ -104,6 +104,11 @@ section .header-active {
 .header-list-items li:hover {
   background-color: #ffffffe7; /* Adds a background color on hover */
   color: black; /* Changes the text color on hover */
+}
+
+.header-active:hover {
+  background-color: #ffffffe7; /* Keep consistent styling on hover */
+  color: black;
 }
 
 /* Base logo container */

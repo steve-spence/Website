@@ -177,10 +177,10 @@ window.addEventListener("scroll", () => {
   });
 
   navLinks.forEach((link) => {
-    link.classList.remove("active");
-    // console.log(link.getAttribute("href") + current)
+    const parent = link.parentElement;
+    parent.classList.remove("header-active");
     if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
+        parent.classList.add("header-active");
     }
   });
 });
