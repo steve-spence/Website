@@ -212,7 +212,7 @@ header.show {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3vh;
+  padding-bottom: 20px;
 }
 
 .education-container {
@@ -300,7 +300,7 @@ header.show {
 .hero-glasses-overlay {
   position: absolute;
   top: 30%;
-  left: 32%;
+  left: 31%;
   width: 40%;
   height: 40%;
   background-image: url("/img/glasses.png");
@@ -346,15 +346,36 @@ header.show {
 .project-title {
   text-align: center;
   font-size: 28px;
+  line-height: 3;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .project-section {
+  line-height: 1;
+  width: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   background-color: #e2e2e1;
-  border-radius: 45px;
+  border-radius: 30px;
+}
+
+.sm-language-image {
+  width: 32px;
+  height: 32px;
+}
+
+.project-madewith {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
 }
 
 .project-image {
@@ -362,15 +383,14 @@ header.show {
   background-size: cover;
   background-position: center;
   height: 300px;
-  width: 20vw;
+  width: 200px;
   border-radius: 30px;
 }
 
 .project-description {
   flex: 1;
-  padding-left: 75px;
+  padding-left: 20px;
   text-align: Left;
-  width: 30vw;
 }
 
 .project-description h2 {
