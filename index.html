@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/media.css" />
   </head>
   <body>
-    <div class="loading-page">
+    <section id="home" class="loading-page">
       <header>
         <div class="header-container">
           <nav class="nav-header-content-container">
@@ -16,11 +16,15 @@
                 <div class="shape shape1"></div>
                 <div class="shape shape2"></div>
               </li> -->
-              <li class="header-home">Home</li>
-              <li class="header-projects">Projects</li>
-              <li class="header-skills">Skills</li>
-              <li class="header-education">Education</li>
-              <li class="header-contact-me">Contact Me</li>
+              <li><a href="#home" class="header-home">Home</a></li>
+              <li><a href="#projects" class="header-projects">Projects</a></li>
+              <li><a href="#skills" class="header-skills">Skills</a></li>
+              <li>
+                <a href="#education" class="header-education">Education</a>
+              </li>
+              <li>
+                <a href="#contact-me" class="header-contact-me">Contact Me</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -29,7 +33,7 @@
       <div class="page-content">
         <div class="hero-container">
           <div class="banner">
-            <section class="hero-section">
+            <div class="hero-section">
               <div class="hero-content">
                 <h1>Hi, my name is <br />Steven.</h1>
                 <p>
@@ -40,18 +44,22 @@
               <div
                 class="hero-steven-photo"
                 style="background-image: url('/img/teeth.jpg')"
+                id="hero-photo"
               ></div>
-              <canvas id="waveCanvas"></canvas>
-            </section>
+              <canvas id="waveCanvas" class="wave-canvas"></canvas>
+            </div>
           </div>
         </div>
         <div class="project-container">
-          <!-- Project Section 1 -->
           <div class="hero-dividor">
             <div class="dividor"></div>
           </div>
-          <div class="project-title">My Projects</div>
-          <section class="project-section">
+          <!-- Project Section 1 -->
+          <section id="projects" class="project-title">My Projects</section>
+          <div class="project-section">
+            <div class="canvas-container">
+              <canvas class="network-canvas"></canvas>
+            </div>
             <div class="network">
               <!-- Input Layer -->
               <div class="input-layer">
@@ -106,9 +114,9 @@
                 >
               </p>
             </div>
-          </section>
+          </div>
           <!-- Project Section 2 -->
-          <section class="project-section">
+          <div class="project-section">
             <div class="project-description">
               <h2>Object Detection System</h2>
               <p>
@@ -120,25 +128,30 @@
               class="project-image"
               style="background-image: url('/img/picture-of-myself.JPG')"
             ></div>
-          </section>
+          </div>
           <!-- Project Section 3 -->
-          <section class="project-section">
+          <div class="project-section">
             <div
               class="project-image"
               style="background-image: url('/img/picture-of-myself.JPG')"
             ></div>
             <div class="project-description">
-              <h2>Project Title 3</h2>
+              <h2>Youtube Video Generator</h2>
               <p>
-                This is where you can describe your third project. Highlight key
-                features and any challenges you overcame while building it.
+                The Text-To-Video AI project leverages GROQ, Pexels, edge-tts,
+                and OpenAI models to generate videos based on text prompts. It
+                gets images from Pexels related to the user input topic, creates
+                a video, and combines the images with the audio. Once the video
+                is created, it combines the power of natural language processing
+                and to create dynamic, visual storytelling experiences from
+                simple textual inputs.
               </p>
             </div>
-          </section>
+          </div>
         </div>
-        <div class="education-container">
+        <section id="education" class="education-container">
           <!-- Education Section -->
-          <section class="education-section">
+          <div class="education-section">
             <div
               class="education-image"
               style="background-image: url('/img/picture-of-myself.JPG')"
@@ -147,9 +160,11 @@
               <h2>Education</h2>
               <p>Michigan State University</p>
             </div>
-          </section>
-        </div>
-        <footer>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <section id="contact-me">
           <div>
             <div class="social-icons">
               <h2>Socials</h2>
@@ -177,9 +192,9 @@
               &copy; 2024 Steven Spencer. All Rights Reserved.
             </div>
           </div>
-        </footer>
-      </div>
-    </div>
+        </section>
+      </footer>
+    </section>
     <script src="js/variables.js"></script>
     <script src="js/NetworkDisplay.js"></script>
     <script src="js/Header.js"></script>

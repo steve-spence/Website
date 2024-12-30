@@ -17,7 +17,6 @@
     //   header.classList.remove('show');
     // }
     lastScrollY = window.scrollY;
-    console.log(headerContainer);
     // parent of contactMe must be empty div
     if(scrollY >= .1*window.vh)  // 10vh header size
     {

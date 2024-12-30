@@ -1,3 +1,5 @@
+let canvasContainer = document.querySelector(".canvas-container")
+let network = document.querySelector(".network")
 
 function connectNodes(inputNodes, outputNodes, nodeRadius) {
     // if(document.querySelector("canvas"))
@@ -7,7 +9,7 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
     // Create a canvas to draw connections
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    document.body.appendChild(canvas);
+    canvasContainer.appendChild(canvas);
 
     // Function to update canvas dimensions
     function updateCanvasSize() {
@@ -101,7 +103,7 @@ nodes.forEach(node => {
 const canvas = document.getElementById('waveCanvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
-canvas.height = window.vh*.7;
+canvas.height = window.vh*.9;
 
 const particles = [];
 const mouse = { x: null, y: null };
@@ -161,3 +163,40 @@ canvas.addEventListener('mousemove', event => {
 
 initParticles();
 animate();
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".header-list-items a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= 0) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    // console.log(link.getAttribute("href") + current)
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// Select the photo div
+const heroPhoto = document.getElementById('hero-photo');
+
+// Add a click event listener
+heroPhoto.addEventListener('click', () => {
+  // Check if the overlay already exists
+  if (!heroPhoto.querySelector('.hero-glasses-overlay')) {
+    // Create a new overlay div
+    const overlay = document.createElement('div');
+    overlay.classList.add('hero-glasses-overlay');
+    
+    // Append the overlay to the hero photo
+    heroPhoto.appendChild(overlay);
+  }
+});
