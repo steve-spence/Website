@@ -26,6 +26,8 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
         // Set canvas size to match the network container size
         canvas.width = networkRect.width;
         canvas.height = networkRect.height;
+
+
     }
 
     updateCanvasSize(); // Initially update canvas size
@@ -117,8 +119,14 @@ nodes.forEach(node => {
 
 const canvas = document.getElementById('waveCanvas');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.vh*.9;
+
+// window.addEventListener('resize'), () => {
+//     canvas.height = window.innerHeight;
+//     canvas.width = window.innerWidth;
+// }
+
+canvas.width = 1920;
+canvas.height = 1080;
 
 const particles = [];
 const mouse = { x: null, y: null };
