@@ -212,7 +212,6 @@ header.show {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
 }
 
 .hero-content {
@@ -244,6 +243,7 @@ header.show {
 }
 
 .social-button {
+  position: relative;
   padding: 10px;
   border-radius: 30px;
   display: flex;
@@ -251,7 +251,6 @@ header.show {
   gap: 10px;
   align-items: center;
   flex-direction: row;
-  border-color: solid green;
   transition: transform 0.3s ease;
 }
 
@@ -377,7 +376,9 @@ header.show {
 }
 
 .project-button-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-description h2 {
@@ -389,6 +390,7 @@ header.show {
   font-size: 16px;
   line-height: 1.6;
 }
+
 .skill-container {
   background-color: #f9faf8;
   display: flex; /* Center the grid */
