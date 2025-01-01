@@ -342,6 +342,7 @@ header.show {
   padding: 20px;
   background-color: #e2e2e1;
   border-radius: 30px;
+  overflow-x: hidden;
 }
 
 .sm-language-image {
@@ -463,6 +464,7 @@ header.show {
   background-color: #bdbdbdb7;
   border-radius: 20px;
   line-height: normal;
+  overflow-x: hidden;
 }
 
 .education-image {
