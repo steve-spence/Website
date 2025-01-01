@@ -28,11 +28,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* background-color: #212121; */
-  /* display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column; */
+  font-size: 16px;
 }
 
 .loading-page {
@@ -154,7 +150,6 @@ header {
 
 .contact-me {
   transition: color 0.5s ease;
-  font-size: 16px;
   /* color: var(--header-element-color); */
   padding-right: 10px;
   font-weight: bold;
@@ -335,14 +330,18 @@ header.show {
 
 .project-section {
   line-height: 1;
-  width: 650px;
+  width: 60vw; /* Responsive width */
+  max-width: 650px; /* Cap the maximum width */
+  min-width: 350px;
+  height: auto; /* Allow height to adjust dynamically */
+  max-height: 400px; /* Cap the maximum height */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   background-color: #e2e2e1;
   border-radius: 30px;
-  overflow-x: hidden;
+  overflow: auto; /* Add scroll if content exceeds max height */
 }
 
 .sm-language-image {
@@ -389,6 +388,7 @@ header.show {
 }
 
 .skill-container {
+  width: 100vw;
   background-color: #f9faf8;
   display: flex; /* Center the grid */
   justify-content: center;
@@ -456,7 +456,9 @@ header.show {
 }
 
 .education-section {
-  width: 600px;
+  width: 60vw;
+  min-width: 350px;
+
   display: flex;
   align-items: center;
   justify-content: center;
