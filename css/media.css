@@ -277,6 +277,8 @@ header {
   align-items: center;
   flex-direction: row;
   transition: transform 0.3s ease;
+  width: 65%;
+  max-width: 160px;
 }
 
 .social-button:hover {
@@ -302,14 +304,15 @@ header {
 
 .project-title {
   text-align: center;
-  font-size: 28px;
   line-height: 3;
   gap: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+}
+.project-title p {
+  font-size: 28px;
 }
 
 .project-section {
@@ -359,6 +362,7 @@ header {
 .project-description {
   flex: 1;
   text-align: left;
+  font-size: inherit;
 }
 
 .project-button-container {
@@ -374,7 +378,7 @@ header {
 }
 
 .project-description p {
-  font-size: 16px;
+  font-size: inherit;
   line-height: 1.4;
 }
 
@@ -465,7 +469,6 @@ header {
 .education-section {
   width: 60vw;
   min-width: 350px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,6 +477,7 @@ header {
   border-radius: 20px;
   line-height: normal;
   overflow-x: hidden;
+  gap: 20px;
 }
 
 .education-image {
@@ -486,19 +490,19 @@ header {
 
 .education-title {
   text-align: center;
-  font-size: 28px;
   line-height: 3;
-  gap: 20px;
+  gap: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+}
+.education-title p {
+  font-size: 28px;
 }
 
 .education-description {
   flex: 1;
-  padding: 20px;
   text-align: left;
 }
 
@@ -508,8 +512,27 @@ header {
 }
 
 .education-description p {
-  font-size: 16px;
+  font-size: inherit;
   line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .education-image {
+    width: 200px;
+    height: 200px;
+  }
+  .education-description h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .education-image {
+    width: 100px;
+    height: 100px;
+  }
+  .education-description h2 {
+    font-size: 20px;
+  }
 }
 
 .network {
