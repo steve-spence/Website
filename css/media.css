@@ -145,6 +145,8 @@ header {
   background: linear-gradient(135deg, #111827, #131a27);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wave-canvas {
