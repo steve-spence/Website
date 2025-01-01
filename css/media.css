@@ -130,6 +130,7 @@ header {
   padding: 20px;
   color: #ffffff;
 }
+
 @media (max-width: 768px) {
   .hero-content {
     text-align: center;
@@ -174,7 +175,7 @@ header {
   border-width: 25px;
   border: #000000 solid;
   background-color: #ccc;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, width 0.6s ease;
   z-index: 6;
   position: relative; /* Ensure child elements (overlay) position correctly */
 }
@@ -206,6 +207,7 @@ header {
 .hero-content h1 {
   font-size: 48px;
   margin-bottom: 10px;
+  transition: font-size 0.6 ease;
 }
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -243,7 +245,7 @@ header {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
   .hero-content-parent {
     flex-direction: column-reverse; /* Switch to column for smaller screens */
   }
@@ -251,12 +253,10 @@ header {
 
 .social-container {
   position: relative;
-  padding: 20px;
+  padding: 3%;
+  padding-bottom: 5%;
   text-align: center;
   z-index: 4;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .social-style-container {
@@ -318,14 +318,21 @@ header {
   max-width: 650px; /* Cap the maximum width */
   min-width: 350px;
   height: auto; /* Allow height to adjust dynamically */
-  max-height: 400px; /* Cap the maximum height */
+  max-height: 460px; /* Cap the maximum height */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 5%;
   background-color: #e2e2e1;
   border-radius: 30px;
   overflow: auto; /* Add scroll if content exceeds max height */
+  gap: 20px;
+}
+
+@media (max-width: 1085px) {
+  .project-section {
+    flex-direction: column;
+  }
 }
 
 .sm-language-image {
@@ -335,7 +342,7 @@ header {
 
 .project-madewith {
   display: flex;
-  justify-content: left;
+  justify-content: inherit;
   align-items: center;
   gap: 10px;
 }
@@ -361,6 +368,7 @@ header {
 }
 
 .project-description h2 {
+  text-align: left;
   margin-bottom: 10px;
   font-size: 28px;
 }
@@ -383,11 +391,13 @@ header {
 
 .skills {
   display: grid; /* Turn this container into a grid */
-  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  grid-template-columns: repeat(4, minmax(150px, 200px)); /* 4 items per row */
   grid-template-rows: repeat(3, auto); /* 3 rows */
   gap: 20px; /* Space between grid items */
   max-width: 800px; /* Optional: Restrict the container width */
+  transition: grid-template-columns 0.3s ease; /* Smooth transitions for layout changes */
 }
+
 .skill-title {
   text-align: center;
   font-size: 28px;
@@ -407,7 +417,7 @@ header {
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, scale 0.6s ease; /* Smooth scaling */
 }
 
 .skill:hover {
@@ -428,6 +438,15 @@ header {
   margin-top: 10px;
   font-size: 16px;
   color: #333333;
+}
+
+@media (max-width: 768px) {
+  .skill {
+    scale: 0.8;
+  }
+  .skills {
+    grid-template-columns: repeat(4, 1fr); /* Change the number of columns */
+  }
 }
 
 .education-container {
@@ -495,6 +514,7 @@ header {
   align-items: center;
   gap: 50px;
   position: relative;
+  padding-left: 50px;
 }
 
 .input-layer {

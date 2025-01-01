@@ -1,6 +1,7 @@
 let canvasContainer = document.querySelector(".canvas-container")
 let network = document.querySelector(".network")
 let heroContainer = document.querySelector(".hero-container")
+const waveHeight = 8;
 
 function getRelativePosition(node, parent) {
     const nodeRect = node.getBoundingClientRect();
@@ -193,10 +194,12 @@ waveCanvas.addEventListener('mousemove', event => {
     mouse.y = event.y;
 });
 
+
 // Initialize canvas and start animation
 function initialize() {
+
     waveCanvas.width = window.innerWidth;
-    waveCanvas.height = window.innerHeight;
+    waveCanvas.height = window.vh*.1*waveHeight;
     initParticles();
     animate();
 }

@@ -3,7 +3,7 @@
   const header = document.querySelector('header');
   let lastScrollY = window.scrollY;
 
-  const headerContainer = document.querySelector('.header-content-container');
+  const headerContainer = document.querySelector('.header-container');
   const logo = document.querySelector('.logo');
 
 
