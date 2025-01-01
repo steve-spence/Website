@@ -31,6 +31,20 @@ body {
   font-size: 16px;
 }
 
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
 .loading-page {
   background-color: #111827;
   z-index: 3;
@@ -210,7 +224,6 @@ header.show {
   text-align: left;
   padding: 20px;
   color: #ffffff;
-  padding-right: 60px;
 }
 
 .social-container {
@@ -265,6 +278,7 @@ header.show {
   background-position: center;
   aspect-ratio: 1;
   width: 300px;
+  min-width: 200px;
   height: auto;
   border-radius: 50%;
   border-width: 25px;
@@ -389,6 +403,8 @@ header.show {
 
 .skill-container {
   width: 100vw;
+  height: auto;
+  overflow: auto;
   background-color: #f9faf8;
   display: flex; /* Center the grid */
   justify-content: center;
