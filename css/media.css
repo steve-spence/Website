@@ -395,19 +395,21 @@ header {
   grid-template-rows: repeat(3, auto); /* 3 rows */
   gap: 20px; /* Space between grid items */
   max-width: 800px; /* Optional: Restrict the container width */
-  transition: grid-template-columns 0.3s ease; /* Smooth transitions for layout changes */
+  transition: grid-template-columns 0.6s ease, gap 0.6s ease; /* Smooth transitions for layout changes */
 }
 
 .skill-title {
   text-align: center;
-  font-size: 28px;
   line-height: 3;
   gap: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+}
+
+.skill-title p {
+  font-size: 28px;
 }
 
 .skill {
@@ -436,7 +438,7 @@ header {
 
 .skill p {
   margin-top: 10px;
-  font-size: 16px;
+  font-size: inherit;
   color: #333333;
 }
 
@@ -446,6 +448,7 @@ header {
   }
   .skills {
     grid-template-columns: repeat(4, 1fr); /* Change the number of columns */
+    gap: 0px;
   }
 }
 
