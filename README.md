@@ -24,11 +24,11 @@ you can host it locally, follow these steps:
 
 1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/yourusername/portfolio-website.git
+    git clone https://github.com/SeaHarpy/Website.git
     ```
 2. Navigate into the project directory:
     ```bash
-    cd portfolio-website
+    cd Website
     ```
 3. Use the VS code Live Preview extension to show the website.
 
