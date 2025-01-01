@@ -1,13 +1,14 @@
-# Portfolio Website
+# Steven Spencer's Portfolio
 
-This is my personal portfolio website, built with HTML5, CSS, and JavaScript. It showcases various projects, skills, and my journey as a developer. The website is designed to be responsive and user-friendly across different devices.
+This is my portfolio website, I built it using HTML5, CSS, and JavaScript. It showcases various projects, skills, and my journey as a software/game developer. The website is designed to be responsive and user-friendly across different devices.
 
 ## Features
 
-- **About Me**: A section to introduce myself, highlighting my background, experiences, and interests.
-- **Projects**: A collection of my projects, including detailed descriptions, links to live demos, and GitHub repositories.
-- **Skills**: An overview of the programming languages, frameworks, and tools I am proficient in.
-- **Contact**: A contact form where visitors can get in touch with me.
+- **Home**: A section to introduce myself
+- **Projects**: A collection of my projects, including detailed descriptions and GitHub repositories.
+- **Skills**: An overview of the programming languages I have worked with
+- **Education**: A place for me to show the universities and colleges I have attended.
+- **Contact**: A contact form where you can get in touch with me.
 - **Responsive Design**: The website adapts to various screen sizes, providing an optimal experience on both desktop and mobile devices.
 
 ## Technologies Used
@@ -18,7 +19,8 @@ This is my personal portfolio website, built with HTML5, CSS, and JavaScript. It
   
 ## Installation
 
-To run this project locally, follow these steps:
+If for some reason you want to use this as a project starter or something
+you can host it locally, follow these steps:
 
 1. Clone this repository to your local machine:
     ```bash
@@ -28,11 +30,11 @@ To run this project locally, follow these steps:
     ```bash
     cd portfolio-website
     ```
-3. Open `index.html` in your browser to view the website.
+3. Use the VS code Live Preview extension to show the website.
 
 ## Usage
 
-Feel free to explore the website and check out my work. You can contact me via the contact form, or connect with me on my social media profiles (links available in the footer).
+Feel free to explore the website and check out my work. You can contact me via the contact form, or connect with me on Linkedln.
 
 ## Contributing
 
