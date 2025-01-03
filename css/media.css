@@ -320,8 +320,8 @@ header {
   width: 60vw; /* Responsive width */
   max-width: 650px; /* Cap the maximum width */
   min-width: 350px;
-  height: auto; /* Allow height to adjust dynamically */
-  max-height: 460px; /* Cap the maximum height */
+  height: auto; /*Allow height to adjust dynamically */
+  max-height: 460px; /*Cap the maximum height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,6 +333,11 @@ header {
 }
 
 @media (max-width: 1085px) {
+  .project-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
   .project-section {
     flex-direction: column;
   }
@@ -355,10 +360,24 @@ header {
   background-size: cover;
   background-position: center;
   height: 300px;
-  width: 200px;
+  width: 300px;
   border-radius: 30px;
 }
 
+/*
+@media (max-width: 800px) {
+  .project-image {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .project-image {
+    height: 100px;
+    width: 100px;
+  }
+}
+*/
 .project-description {
   flex: 1;
   text-align: left;
@@ -375,6 +394,28 @@ header {
   text-align: left;
   margin-bottom: 10px;
   font-size: 28px;
+}
+
+.project-description h4 {
+  font-size: 24px;
+}
+
+@media (max-width: 800px) {
+  .project-description h2 {
+    font-size: 24px;
+  }
+  .project-description h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-description h2 {
+    font-size: 20px;
+  }
+  .project-description h4 {
+    font-size: 16px;
+  }
 }
 
 .project-description p {
