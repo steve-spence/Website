@@ -1,5 +1,5 @@
 let canvasContainer = document.querySelector(".canvas-container")
-let network = document.querySelector(".network")
+//let network = document.querySelector(".network")
 let heroContainer = document.querySelector(".hero-container")
 const waveHeight = 8;
 
@@ -94,29 +94,29 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
     window.addEventListener('scroll', drawConnections); // Redraw connections on scroll
 }
 
-// Fetch nodes from the DOM
-const inputNodes = document.querySelectorAll('.input-layer .node');
-const hiddenNodes1 = document.querySelectorAll('.hidden-layer1 .node');
-const hiddenNodes2 = document.querySelectorAll('.hidden-layer2 .node');
-const outputNodes = document.querySelectorAll('.output-layer .node');
+// // Fetch nodes from the DOM
+// const inputNodes = document.querySelectorAll('.input-layer .node');
+// const hiddenNodes1 = document.querySelectorAll('.hidden-layer1 .node');
+// const hiddenNodes2 = document.querySelectorAll('.hidden-layer2 .node');
+// const outputNodes = document.querySelectorAll('.output-layer .node');
 
-// Define the radius of your nodes (you can adjust this value as needed)
-const nodeRadius = 10;
+// // Define the radius of your nodes (you can adjust this value as needed)
+// const nodeRadius = 10;
 
-// Call the function to connect the nodes
-connectNodes(inputNodes, hiddenNodes1, nodeRadius);
-connectNodes(hiddenNodes1, hiddenNodes2, nodeRadius);
-connectNodes(hiddenNodes2, outputNodes, nodeRadius);
+// // Call the function to connect the nodes
+// connectNodes(inputNodes, hiddenNodes1, nodeRadius);
+// connectNodes(hiddenNodes1, hiddenNodes2, nodeRadius);
+// connectNodes(hiddenNodes2, outputNodes, nodeRadius);
 
 
 
-// update time for all nodes aniamtion
-var nodes = document.querySelectorAll('.node');
-nodes.forEach(node => {
-    var time = Math.random()*10;
-    time = time < 1 ? 1 : time;
-    node.style.setProperty('--animation-time', time + 's');
-});
+// // update time for all nodes aniamtion
+// var nodes = document.querySelectorAll('.node');
+// nodes.forEach(node => {
+//     var time = Math.random()*10;
+//     time = time < 1 ? 1 : time;
+//     node.style.setProperty('--animation-time', time + 's');
+// });
 
 //----------------------- Header Background ---------------------------------------
 

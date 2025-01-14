@@ -116,15 +116,6 @@ header {
   color: black; /* Changes the text color on hover */
 }
 
-.project-container {
-  background: #f9faf8;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .hero-content {
   text-align: left;
   padding: 20px;
@@ -302,6 +293,10 @@ header {
   background-color: #7c7c7c70;
 }
 
+.project-container {
+  background: #f9faf8;
+}
+
 .project-title {
   text-align: center;
   line-height: 3;
@@ -315,20 +310,37 @@ header {
   font-size: 28px;
 }
 
-.project-section {
-  line-height: 1;
-  width: 60vw; /* Responsive width */
-  max-width: 650px; /* Cap the maximum width */
+/* .education-section {
+  width: 70vw;
   min-width: 350px;
-  height: auto; /*Allow height to adjust dynamically */
-  max-height: 460px; /*Cap the maximum height */
+  max-width: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5%;
+  padding: 20px;
+  background-color: #bdbdbdb7;
+  border-radius: 20px;
+  line-height: normal;
+  overflow-x: auto;
+  gap: 20px;
+} */
+
+.project-section {
+  line-height: 1;
+  width: 60vw; /* Responsive width */
+  min-width: 350px;
+  max-width: 800px;
+  height: auto;
+  max-height: 400px;
+  /* height: auto;Allow height to adjust dynamically */
+  /* max-height: 600px;Cap the maximum height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   background-color: #e2e2e1;
   border-radius: 30px;
-  overflow: auto; /* Add scroll if content exceeds max height */
+  /* overflow: auto; Add scroll if content exceeds max height */
   gap: 20px;
 }
 
@@ -356,7 +368,6 @@ header {
 }
 
 .project-image {
-  flex: 1;
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -421,6 +432,27 @@ header {
 .project-description p {
   font-size: inherit;
   line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .project-image {
+    width: 290px;
+    height: 200px;
+  }
+  .project-description h2 {
+    font-size: 24px;
+  }
+  .project-description h4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .project-description h2 {
+    font-size: 20px;
+  }
+  .project-description h4 {
+    font-size: 16px;
+  }
 }
 
 .skill-container {
@@ -510,6 +542,7 @@ header {
 .education-section {
   width: 60vw;
   min-width: 350px;
+  max-width: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
