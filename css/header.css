@@ -1,0 +1,65 @@
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  transition: transform 0.5s ease; /* Smooth animation for entering/exiting */
+  transform: translateY(0); /* Visible by default */
+  z-index: 100;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px; /* Add some padding to give breathing space */
+}
+
+.header-active {
+  background-color: #ffffffe7; /* Adds a background color on hover */
+  color: black; /* Changes the text color on hover */
+}
+
+/* Navigation Container */
+.nav-header-content-container {
+  border-radius: 5vw; /* Change from 15% to 15px for smoother corners */
+  background-color: #ffffffd5; /* Clean white background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  text-align: center;
+}
+
+/* Remove default list styles */
+.header-list-items {
+  padding: 5px; /* Removes extra padding */
+  margin: 0; /* Removes default margin */
+  display: flex; /* Aligns items in a row */
+  align-items: stretch; /* Aligns items vertically */
+  justify-content: space-between;
+}
+
+/* Style individual list items */
+.header-list-items li {
+  list-style-type: none; /* Removes bullet points */
+  flex: 0 1 auto;
+  margin: 0; /* Adds space between the list items */
+  cursor: pointer; /* Makes the list items look clickable */
+  padding: 10px;
+  border-radius: 5vw;
+  color: #303030c9;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+/* Style anchor links inside list items */
+.header-list-items li a {
+  text-decoration: none; /* Removes the underline from the links */
+  color: inherit; /* Inherits the color of the parent li */
+  font-weight: bold; /* Makes the text bold */
+  display: block; /* Makes the anchor fill the li */
+  text-align: center; /* Centers the text inside the anchor */
+}
+
+/* Hover effect for list items */
+.header-list-items li:hover {
+  background-color: #ffffffe7; /* Adds a background color on hover */
+  color: black; /* Changes the text color on hover */
+}
