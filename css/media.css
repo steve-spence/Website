@@ -112,6 +112,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 5vh;
 }
 .project-title p {
   font-size: 28px;
@@ -178,19 +179,21 @@ body {
 }
 
 .project-button-container {
+  height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 
 .project-description h2 {
   text-align: left;
-  margin-bottom: 10px;
   font-size: 28px;
 }
 
 .project-description h4 {
   font-size: 24px;
+  font-weight: 200;
+  opacity: 0.8;
 }
 
 @media (max-width: 800px) {
@@ -209,6 +212,9 @@ body {
   .project-description h4 {
     font-size: 16px;
   }
+  .sm-language-image {
+    scale: 0.6;
+  }
 }
 
 .project-description p {
@@ -221,6 +227,9 @@ body {
     width: 0px;
     height: 0px;
   }
+  .project-section {
+    gap: 0px;
+  }
   .project-description h2 {
     font-size: 24px;
   }
@@ -228,7 +237,7 @@ body {
     font-size: 20px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .project-description h2 {
     font-size: 20px;
   }
@@ -250,7 +259,7 @@ body {
 
 .skills {
   display: grid; /* Turn this container into a grid */
-  grid-template-columns: repeat(4, minmax(150px, 200px)); /* 4 items per row */
+  grid-template-columns: repeat(4, auto); /* 4 items per row */
   grid-template-rows: repeat(3, auto); /* 3 rows */
   gap: 20px; /* Space between grid items */
   max-width: 800px; /* Optional: Restrict the container width */
@@ -272,6 +281,8 @@ body {
 }
 
 .skill {
+  width: 100px;
+  height: 150px;
   text-align: center; /* Center text below the skill image */
   background-color: #ffffff;
   border: 1px solid #dcdcdc;
@@ -301,13 +312,19 @@ body {
   color: #333333;
 }
 
-@media (max-width: 768px) {
+/*
+messing with the width of the skill its like half the size of hte image with the shadow might have to get svgs instead of images
+that would make a lot more sense  (svg - scalable vector gradient?)
+*/
+
+@media (max-width: 600px) {
   .skill {
-    scale: 0.8;
+    width: 70px;
+    height: 120px;
   }
-  .skills {
-    grid-template-columns: repeat(4, 1fr); /* Change the number of columns */
-    gap: 0px;
+  .skill-image {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -318,7 +335,7 @@ body {
   align-items: center;
   gap: 20px;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 10vh;
 }
 
 .education-section {
