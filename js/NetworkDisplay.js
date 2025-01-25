@@ -233,16 +233,22 @@ window.addEventListener("scroll", () => {
 //----------------------- Glasses ---------------------------------------
 // Select the photo div
 const heroPhoto = document.getElementById('hero-photo');
+var isBucket = false;
 
 // Add a click event listener
 heroPhoto.addEventListener('click', () => {
   // Check if the overlay already exists
-  if (!heroPhoto.querySelector('.hero-glasses-overlay')) {
-    // Create a new overlay div
-    const overlay = document.createElement('div');
-    overlay.classList.add('hero-glasses-overlay');
-    
-    // Append the overlay to the hero photo
-    heroPhoto.appendChild(overlay);
-  }
+    if(!isBucket){
+        heroPhoto.style.backgroundImage = "url('img/bucket-hat.jpg')";
+        const overlay = document.createElement('div');
+        overlay.classList.add('hero-glasses-overlay');
+        heroPhoto.appendChild(overlay);
+        isBucket = true;
+    }
+    else{
+        heroPhoto.style.backgroundImage = "url('img/proff-me.png')";
+        heroPhoto.querySelector('.hero-glasses-overlay').remove();
+        isBucket = false;
+
+    }
 });

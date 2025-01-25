@@ -4,7 +4,7 @@
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
   .hero-content {
     text-align: center;
   }
@@ -39,11 +39,11 @@
 }
 
 .hero-steven-photo {
-  background-size: 160%;
-  background-position: 55% 20%;
+  background-size: 100%;
+  background-position: center;
   aspect-ratio: 1;
-  width: 300px;
-  top: 50;
+  width: 400px;
+  top: 0;
   height: auto;
   border-radius: 50%;
   border-width: 25px;
@@ -54,7 +54,24 @@
   position: relative; /* Ensure child elements (overlay) position correctly */
 }
 
-@media (max-width: 768px) {
+/*
+Bucket hat settings
+  background-size: 160%;
+  background-position: 55% 20%;
+  aspect-ratio: 1;
+  width: 400px;
+  top: 50;
+  height: auto;
+  border-radius: 50%;
+  border-width: 25px;
+*/
+
+@media (max-width: 1000px) {
+  .hero-steven-photo {
+    width: 300px;
+  }
+}
+@media (max-width: 520px) {
   .hero-steven-photo {
     width: 200px;
   }
@@ -67,12 +84,12 @@
 
 .hero-glasses-overlay {
   position: absolute;
-  top: 37%;
-  left: 45%;
+  top: 21%;
+  left: 49%;
   width: 40%;
   height: 40%;
   background-image: url("/img/glasses.png");
-  background-size: 42%;
+  background-size: 25%;
   background-repeat: no-repeat;
   pointer-events: none; /* Prevent interaction issues */
 }
