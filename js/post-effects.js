@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             entry.target.classList.add("visible");
             if(entry.target.classList.contains('skill')) {
                 entry.target.classList.remove("visible");
-                if(index % 2 === 0) { // animate left then right then left ...
+                if(index % 2 === 0) { // Animate left then right then left ...
                 entry.target.style.animation = 'slide-in-from-left 0.6s ease-out forwards';
                 } else {
                 entry.target.style.animation = 'slide-in-from-right 0.6s ease-out forwards';

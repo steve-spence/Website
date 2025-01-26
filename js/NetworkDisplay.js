@@ -1,5 +1,4 @@
 let canvasContainer = document.querySelector(".canvas-container")
-//let network = document.querySelector(".network")
 let heroContainer = document.querySelector(".hero-container")
 const waveHeight = 8;
 
@@ -63,13 +62,13 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
 
                 // Calculate the line start points based on the radius (subtract radius from center)
                 const inputEdge = {
-                    x: inputCenter.x + (nodeRadius * Math.cos(0)),  // Adjust x-coordinate based on radius
-                    y: inputCenter.y + (nodeRadius * Math.sin(0)),  // Adjust y-coordinate based on radius
+                    x: inputCenter.x + (nodeRadius * Math.cos(0)),  
+                    y: inputCenter.y + (nodeRadius * Math.sin(0)),  
                 };
 
                 const outputEdge = {
-                    x: outputCenter.x + (nodeRadius * Math.cos(Math.PI)),  // Adjust x-coordinate for the opposite direction
-                    y: outputCenter.y + (nodeRadius * Math.sin(Math.PI)),  // Adjust y-coordinate for the opposite direction
+                    x: outputCenter.x + (nodeRadius * Math.cos(Math.PI)),  
+                    y: outputCenter.y + (nodeRadius * Math.sin(Math.PI)),  
                 };
 
                 // Draw the line between the edges of the nodes (not their centers)
@@ -83,42 +82,18 @@ function connectNodes(inputNodes, outputNodes, nodeRadius) {
         }); 
     }
 
-    drawConnections(); // Draw the initial connections
+    drawConnections(); 
 
     // Redraw connections on resize or scroll
     window.addEventListener('resize', () => {
-        updateNetworkCanvasSize(); // Update canvas size on resize
-        drawConnections(); // Redraw connections
+        updateNetworkCanvasSize(); 
+        drawConnections();
     });
 
     window.addEventListener('scroll', drawConnections); // Redraw connections on scroll
 }
 
-// // Fetch nodes from the DOM
-// const inputNodes = document.querySelectorAll('.input-layer .node');
-// const hiddenNodes1 = document.querySelectorAll('.hidden-layer1 .node');
-// const hiddenNodes2 = document.querySelectorAll('.hidden-layer2 .node');
-// const outputNodes = document.querySelectorAll('.output-layer .node');
-
-// // Define the radius of your nodes (you can adjust this value as needed)
-// const nodeRadius = 10;
-
-// // Call the function to connect the nodes
-// connectNodes(inputNodes, hiddenNodes1, nodeRadius);
-// connectNodes(hiddenNodes1, hiddenNodes2, nodeRadius);
-// connectNodes(hiddenNodes2, outputNodes, nodeRadius);
-
-
-
-// // update time for all nodes aniamtion
-// var nodes = document.querySelectorAll('.node');
-// nodes.forEach(node => {
-//     var time = Math.random()*10;
-//     time = time < 1 ? 1 : time;
-//     node.style.setProperty('--animation-time', time + 's');
-// });
-
-//----------------------- Header Background ---------------------------------------
+//----------------------- Header Background (Wave Canvas) ---------------------------------------
 
 const waveCanvas = document.getElementById('waveCanvas');
 const waveCTX = waveCanvas.getContext('2d');
