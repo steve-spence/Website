@@ -118,6 +118,13 @@ body {
   font-size: 28px;
 }
 
+.social-button.project {
+  background-color: #f9faf8;
+  color: black;
+}
+.github-button.project {
+  color: black;
+}
 /* .education-section {
   width: 70vw;
   min-width: 350px;
@@ -153,8 +160,8 @@ body {
 }
 
 .sm-language-image {
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
 }
 
 .project-madewith {
