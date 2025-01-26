@@ -89,6 +89,8 @@ body {
 }
 
 .social-image {
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   width: 32px;
   height: 28px;
@@ -160,8 +162,10 @@ body {
 }
 
 .sm-language-image {
-  width: 60px;
-  height: 60px;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .project-madewith {

@@ -1,0 +1,18 @@
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.right {
+  transform: translateX(200px);
+}
+
+.animate-on-scroll.left {
+  transform: translateX(-200px);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
