@@ -149,16 +149,23 @@ body {
   max-width: 800px;
   height: auto;
   max-height: 400px;
-  /* height: auto;Allow height to adjust dynamically */
-  /* max-height: 600px;Cap the maximum height */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   background-color: #e2e2e1;
   border-radius: 30px;
-  /* overflow: auto; Add scroll if content exceeds max height */
   gap: 20px;
+  transition: transition 0.8s ease-out;
+}
+
+@keyframes scale-on-scroll {
+  from {
+    scale: 0.4;
+  }
+  to {
+    scale: 1;
+  }
 }
 
 .sm-language-image {
@@ -233,7 +240,7 @@ body {
   line-height: 1.4;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .project-image {
     width: 0px;
     height: 0px;
@@ -327,7 +334,7 @@ body {
 }
 
 .skill:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -385,8 +392,12 @@ that would make a lot more sense  (svg - scalable vector gradient?)
   line-height: normal;
   overflow-x: hidden;
   gap: 20px;
+  transition: transform 0.2s ease;
 }
 
+.education-section:hover {
+  transform: scale(1.05);
+}
 .education-image {
   background-size: cover;
   background-position: center;
