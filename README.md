@@ -5,11 +5,11 @@ This is my portfolio website, I built this with HTML5, CSS, and JavaScript. It s
 
 ## Features
 
-- **Home**: A section to introduce myself
+- **Home**: The main Landing page.
 - **Projects**: A collection of my projects, including detailed descriptions and GitHub repositories.
-- **Skills**: An overview of the programming languages I have worked with
+- **Skills**: An overview of the programming languages I have worked with.
 - **Education**: A place for me to show the universities and colleges I have attended.
-- **Contact**: A contact form where you can get in touch with me.
+- **Contact**: A button that will redirect you to send me an email.
 - **Responsive Design**: The website adapts to various screen sizes, providing an optimal experience on both desktop and mobile devices.
 
 ## Technologies Used
