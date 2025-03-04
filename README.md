@@ -31,7 +31,7 @@ you can host it locally, follow these steps:
     ```bash
     cd Website
     ```
-3. Use the VS code Live Preview extension to show the website.
+3. Use the VS code Live Preview extension to show the website. Or you can host it locally usuing python.
 
 ## Usage
 
