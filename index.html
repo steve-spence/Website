@@ -165,17 +165,20 @@
                   ></div>
                 </div>
                 <p>
-                  In this project I explored how to use different AI models
-                  including Groq and OpenAI's GPT-4. I learned how to prompt
-                  models for specific requests and how to interperet their
-                  responses. This program works by prompting OpenAI/Groq with a
-                  topic chosen by the user. The response goes through Edge-tts
-                  which converts the text to audio. At the same time, it goes to
+                  In this project I explored how to use different machine learning 
+                  models through Groq. I ended up using gpt-4o-mini in the end, but 
+                  I experimented with many others along with way includidng various llama and gemma models.
+                  The most important thing I learned working on this project was how to 
+                  effectively prompt these models and get valid respnoses. 
+                  This program works by prompting gpt with a
+                  topic and feeding gpt response through a network of APIs. 
+                  First, the response goes through Edge-tts
+                  which converts the text to audio. Then it goes to
                   Pexels (free image library) and queries their library for
                   images realated the initial user input. Finally the images and
-                  audio are combined into a video and saved locally. The next
-                  step for this project is to use Selenium to automatically
-                  uploaded the videos to a social media site.
+                  audio are combined into a video and saved locally.
+                  In the future, I may revisit this program to parallelize it or 
+                  use asyncio to learn more about cooperative multitasking.
                 </p>
                 <div class="project-button-container">
                   <div class="social-button project">
