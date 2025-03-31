@@ -102,9 +102,6 @@
           </div>
           <section id="projects" class="project-title">
             <p>My Projects</p>
-
-            <!-- Project Section 2 -->
-
             <!-- Project Section 3 -->
             <div class="project-section animate-on-scroll right">
               <div
@@ -165,17 +162,15 @@
                   ></div>
                 </div>
                 <p>
-                  In this project I explored how to use different machine learning 
-                  models through Groq. I ended up using gpt-4o-mini in the end, but 
-                  I experimented with many others along with way includidng various llama and gemma models.
+                  In this project I used groqcloud's API to query different LLMs like llama and gemma.
                   The most important thing I learned working on this project was how to 
                   effectively prompt these models and get valid respnoses. 
-                  This program works by prompting gpt with a
-                  topic and feeding gpt response through a network of APIs. 
-                  First, the response goes through Edge-tts
-                  which converts the text to audio. Then it goes to
-                  Pexels (free image library) and queries their library for
-                  images realated the initial user input. Finally the images and
+                  This program works by prompting the chosen model with a
+                  topic and feeding json responses through a network of APIs. 
+                  First, I generate 10 fun facts about the topic from the model. 
+                  The response goes through Edge-tts which converts the text to audio. 
+                  Then it goes to Pexels (free image library) and queries their library for
+                  images realated the topic. Finally the images and
                   audio are combined into a video and saved locally.
                   In the future, I may revisit this program to parallelize it or 
                   use asyncio to learn more about cooperative multitasking.
